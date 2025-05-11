@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxian 3D Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid white; 
+            background-image: url('stars.jpg'); /* Set your background image here */
+            background-size: cover; /* Make the image cover the canvas area */
+            background-position: center; /* Center the image */
+        }
+        #score-display {
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+    <!-- Include glMatrix library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+</head>
+<body>
+    <div id="score-display">
+        Score: <span id="score">0</span> | Level: <span id="level">1</span>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="Game Play.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <audio id="shot-sound">
+        <source src="Fighter -Shot1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <audio id="collision-sound">
+        <source src="Miss.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <canvas id="gameCanvas" width="1000" height="1000"></canvas>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script> -->
+    <script src="game1.js"></script>
+
+</body>
+</html>
